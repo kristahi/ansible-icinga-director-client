@@ -14,6 +14,8 @@ icinga_director_fqdn: "{{ icinga_master_fqdn }}"
 #icinga_director_url: "{{ icinga_director_host_protocol ~ '://' ~ icinga_master_fqdn ~ '/icingaweb2/director' }}"
 icinga_director_url: "{{ icinga_director_host_protocol ~ '://' ~ icinga_director_fqdn ~ '/icingaweb2/director' }}"
 
+icinga_package_version: "{{ '=' ~ icinga_target_version | default('*') }}"
+
 icinga_client_host_object:
   object_name: "{{ icinga_client_fqdn }}"
   display_name: "{{ icinga_client_display_name }}"
