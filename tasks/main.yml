@@ -1,9 +1,9 @@
 ---
-- name: Add Icinga repository key.
-  apt_key: url=https://packages.icinga.com/icinga.key
-
-- name: Add Icinga repository.
-  apt_repository: repo="deb https://packages.icinga.com/{{ ansible_distribution|lower }} icinga-{{ ansible_distribution_release }} main" 
+#- name: Add Icinga repository key.
+#  apt_key: url=https://packages.icinga.com/icinga.key
+#
+#- name: Add Icinga repository.
+#  apt_repository: repo="deb https://packages.icinga.com/{{ ansible_distribution|lower }} icinga-{{ ansible_distribution#_release }} main"
 
 - name: Installing Icinga packages.
   apt: name="{{ item }}" state=latest
