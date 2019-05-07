@@ -39,6 +39,11 @@
     url: "{{ icinga_director_url }}/config/deploy"
     user: "{{ icinga_director_user }}"
     password: "{{ icinga_director_pass }}"
+  run_once: true
+
+- name: Wait for Icinga Director to finish deploying...
+  pause:
+    seconds: 5
 
 - name: Get Icinga client ticket.
   uri:
